@@ -173,7 +173,7 @@
                     <span class="ml-2 mono text-xs text-slate-400">rahul-agent-cli — Interactive Resume & Architecture Assistant</span>
                 </div>
                 <div class="flex items-center gap-3">
-                    <span class="mono text-xs px-2 py-0.5 rounded bg-sky-500/10 text-sky-400 border border-sky-500/20">● Smart NLP Engine Ready</span>
+                    <span id="agent-mode-badge" class="mono text-xs px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">● Live Groq Llama-3.1-8B</span>
                     <button onclick="clearTerminal()" class="text-xs mono text-slate-400 hover:text-white transition">Clear</button>
                 </div>
             </div>
@@ -423,7 +423,7 @@
     <script>
         lucide.createIcons();
 
-        const LIVE_LLM_ENDPOINT = "";
+        const LIVE_LLM_ENDPOINT = "https://rahul-ai-agent.rwaghmare981.workers.dev";
 
         // Mobile Drawer Toggle
         function toggleMobileMenu() {
