@@ -4,18 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rahul Waghmare | Senior AI/ML & LLM Engineer</title>
+    
+    <!-- SEO & Social Sharing (OpenGraph) Meta Tags -->
+    <meta name="description" content="Senior AI/ML Engineer with 4+ years of experience building production LLM Fine-Tuning (LoRA/QLoRA/SFT), Adaptive RAG, LangGraph Multi-Agent Systems, and Databricks Lakehouse pipelines.">
+    <meta name="author" content="Rahul Santram Waghmare">
+    <meta property="og:title" content="Rahul Waghmare | Senior AI/ML & LLM Engineer">
+    <meta property="og:description" content="Explore interactive system architectures: Llama 3.1 Fine-Tuning (96.7%+ accuracy), Adaptive CRAG (97.8% recall), LangGraph Multi-Agent Systems, and Databricks Medallion pipelines.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://rwaghmare-tech.github.io/">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Custom SVG Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%23090d16'/><rect x='4' y='4' width='92' height='92' rx='18' fill='none' stroke='%2338bdf8' stroke-width='6'/><text x='50%' y='54%' dominant-baseline='middle' text-anchor='middle' font-family='monospace' font-weight='bold' font-size='44' fill='%2338bdf8'>RW</text></svg>">
+
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
     <style>
         body { font-family: 'Inter', sans-serif; background-color: #090d16; color: #e2e8f0; }
         .mono { font-family: 'JetBrains Mono', monospace; }
-        .glass { background: rgba(17, 24, 39, 0.75); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.08); }
+        .glass { background: rgba(17, 24, 39, 0.78); backdrop-filter: blur(14px); border: 1px solid rgba(255, 255, 255, 0.08); }
         .glow-card { transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
-        .glow-card:hover { transform: translateY(-4px); border-color: rgba(56, 189, 248, 0.4); box-shadow: 0 12px 30px -10px rgba(56, 189, 248, 0.2); }
+        .glow-card:hover { transform: translateY(-4px); border-color: rgba(56, 189, 248, 0.45); box-shadow: 0 12px 32px -10px rgba(56, 189, 248, 0.22); }
         .gradient-text { background: linear-gradient(135deg, #38bdf8 0%, #818cf8 50%, #c084fc 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
         .cursor-blink { animation: blink 1s step-end infinite; }
         @keyframes blink { 50% { opacity: 0; } }
+        .arch-node { background: rgba(15, 23, 42, 0.9); border: 1px solid rgba(56, 189, 248, 0.25); }
     </style>
 </head>
 <body class="selection:bg-sky-500 selection:text-white overflow-x-hidden">
@@ -37,9 +51,11 @@
                 <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-sky-400 to-purple-500 flex items-center justify-center text-slate-950 font-extrabold text-sm">RW</div>
                 <span>rahul.ai<span class="text-sky-400">_</span></span>
             </a>
+
+            <!-- Desktop Menu -->
             <div class="hidden md:flex items-center gap-6 text-sm font-medium text-slate-300">
                 <a href="#ai-terminal" class="hover:text-sky-400 transition">Ask My AI</a>
-                <a href="#projects" class="hover:text-sky-400 transition">Systems</a>
+                <a href="#projects" class="hover:text-sky-400 transition">Architecture & Systems</a>
                 <a href="#experience" class="hover:text-sky-400 transition">Experience</a>
                 <a href="#skills" class="hover:text-sky-400 transition">Stack</a>
                 <div class="h-4 w-px bg-white/15"></div>
@@ -51,6 +67,28 @@
                 </a>
                 <a href="Rahul_Waghmare_Resume.pdf" download class="px-4 py-2 rounded-lg bg-sky-500 hover:bg-sky-400 text-slate-950 font-semibold flex items-center gap-1.5 transition">
                     <i data-lucide="download" class="w-4 h-4"></i> Resume
+                </a>
+            </div>
+
+            <!-- Mobile Hamburger Button -->
+            <button onclick="toggleMobileMenu()" class="md:hidden p-2 rounded-lg glass text-slate-300 hover:text-white">
+                <i data-lucide="menu" class="w-5 h-5"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Dropdown Drawer -->
+        <div id="mobile-menu" class="hidden md:hidden border-t border-white/10 bg-slate-950/95 px-6 py-4 space-y-3 text-sm">
+            <a href="#ai-terminal" onclick="toggleMobileMenu()" class="block py-1.5 text-slate-300 hover:text-sky-400">Ask My AI</a>
+            <a href="#projects" onclick="toggleMobileMenu()" class="block py-1.5 text-slate-300 hover:text-sky-400">Architecture & Systems</a>
+            <a href="#experience" onclick="toggleMobileMenu()" class="block py-1.5 text-slate-300 hover:text-sky-400">Experience</a>
+            <a href="#skills" onclick="toggleMobileMenu()" class="block py-1.5 text-slate-300 hover:text-sky-400">Technical Stack</a>
+            <div class="pt-2 border-t border-white/10 flex items-center justify-between">
+                <div class="flex items-center gap-4">
+                    <a href="https://github.com/rwaghmare-tech" target="_blank" rel="noopener" class="text-slate-300 hover:text-white"><i data-lucide="github" class="w-5 h-5"></i></a>
+                    <a href="https://www.linkedin.com/in/rwaghmare29" target="_blank" rel="noopener" class="text-slate-300 hover:text-sky-400"><i data-lucide="linkedin" class="w-5 h-5"></i></a>
+                </div>
+                <a href="Rahul_Waghmare_Resume.pdf" download class="px-4 py-2 rounded-lg bg-sky-500 text-slate-950 font-semibold text-xs flex items-center gap-1.5">
+                    <i data-lucide="download" class="w-4 h-4"></i> Download Resume
                 </a>
             </div>
         </div>
@@ -66,7 +104,7 @@
                 <h1 class="text-4xl sm:text-6xl font-bold tracking-tight text-white leading-tight">
                     Rahul Santram <span class="gradient-text">Waghmare</span>
                 </h1>
-                <div class="h-8 mono text-lg sm:text-xl text-slate-300 flex items-center">
+                <div class="h-8 mono text-base sm:text-xl text-slate-300 flex items-center">
                     <span>&gt;&nbsp;</span>
                     <span id="typewriter" class="text-sky-400 font-medium"></span>
                     <span class="cursor-blink text-sky-400">|</span>
@@ -92,7 +130,7 @@
                 </div>
             </div>
 
-            <!-- Live Metrics Dashboard Card -->
+            <!-- Live Animated Metrics Dashboard Card -->
             <div class="lg:col-span-5 glass rounded-2xl p-6 border border-white/10 space-y-6">
                 <div class="flex items-center justify-between border-b border-white/10 pb-4">
                     <span class="mono text-xs text-slate-400 uppercase tracking-wider">Production Impact Telemetry</span>
@@ -100,19 +138,19 @@
                 </div>
                 <div class="grid grid-cols-2 gap-4">
                     <div class="p-4 rounded-xl bg-slate-900/80 border border-white/5">
-                        <div class="text-3xl font-bold text-sky-400 mono">96.7%+</div>
+                        <div class="text-3xl font-bold text-sky-400 mono"><span class="counter" data-target="96.7" data-decimals="1">0</span>%+</div>
                         <div class="text-xs text-slate-400 mt-1">Llama 3.1 Fine-Tuning Accuracy</div>
                     </div>
                     <div class="p-4 rounded-xl bg-slate-900/80 border border-white/5">
-                        <div class="text-3xl font-bold text-purple-400 mono">85%</div>
+                        <div class="text-3xl font-bold text-purple-400 mono"><span class="counter" data-target="85" data-decimals="0">0</span>%</div>
                         <div class="text-xs text-slate-400 mt-1">AI Infra & Inference Cost Reduction</div>
                     </div>
                     <div class="p-4 rounded-xl bg-slate-900/80 border border-white/5">
-                        <div class="text-3xl font-bold text-emerald-400 mono">97.8%</div>
+                        <div class="text-3xl font-bold text-emerald-400 mono"><span class="counter" data-target="97.8" data-decimals="1">0</span>%</div>
                         <div class="text-xs text-slate-400 mt-1">Hybrid RAG Contextual Recall</div>
                     </div>
                     <div class="p-4 rounded-xl bg-slate-900/80 border border-white/5">
-                        <div class="text-3xl font-bold text-amber-400 mono">$2.5M</div>
+                        <div class="text-3xl font-bold text-amber-400 mono">$<span class="counter" data-target="2.5" data-decimals="1">0</span>M</div>
                         <div class="text-xs text-slate-400 mt-1">Projected Retail Forecast Savings</div>
                     </div>
                 </div>
@@ -135,7 +173,7 @@
                     <span class="ml-2 mono text-xs text-slate-400">rahul-agent-cli — Interactive Resume & Architecture Assistant</span>
                 </div>
                 <div class="flex items-center gap-3">
-                    <span id="agent-mode-badge" class="mono text-xs px-2 py-0.5 rounded bg-sky-500/10 text-sky-400 border border-sky-500/20">● Smart NLP Engine Ready</span>
+                    <span class="mono text-xs px-2 py-0.5 rounded bg-sky-500/10 text-sky-400 border border-sky-500/20">● Smart NLP Engine Ready</span>
                     <button onclick="clearTerminal()" class="text-xs mono text-slate-400 hover:text-white transition">Clear</button>
                 </div>
             </div>
@@ -161,12 +199,12 @@
         </div>
     </section>
 
-    <!-- Filterable Projects Section -->
+    <!-- Filterable Projects Section with Architecture Modals -->
     <section id="projects" class="py-16 px-6 max-w-6xl mx-auto space-y-8">
         <div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
             <div>
                 <h2 class="text-3xl font-bold text-white">Production AI & Data Systems</h2>
-                <p class="text-slate-400 text-sm mt-1">Filter by domain to inspect architecture, scale, and business outcomes.</p>
+                <p class="text-slate-400 text-sm mt-1">Click <strong>"View Architecture Blueprint"</strong> on any card to inspect the end-to-end engineering pipeline.</p>
             </div>
             <div class="flex flex-wrap gap-2" id="project-filters">
                 <button onclick="filterProjects('all', this)" class="filter-btn px-4 py-1.5 rounded-lg text-xs mono bg-sky-500 text-slate-950 font-semibold transition">All Systems</button>
@@ -193,11 +231,16 @@
                         <li>• Pydantic structured outputs + HITL confidence routing</li>
                     </ul>
                 </div>
-                <div class="flex flex-wrap gap-2 pt-6 mt-4 border-t border-white/10">
-                    <span class="text-xs mono px-2.5 py-1 rounded bg-slate-800 text-slate-300">Llama 3.1</span>
-                    <span class="text-xs mono px-2.5 py-1 rounded bg-slate-800 text-slate-300">LoRA / SFT</span>
-                    <span class="text-xs mono px-2.5 py-1 rounded bg-slate-800 text-slate-300">PyTorch</span>
-                    <span class="text-xs mono px-2.5 py-1 rounded bg-slate-800 text-slate-300">MLflow</span>
+                <div class="pt-6 mt-4 border-t border-white/10 space-y-4">
+                    <div class="flex flex-wrap gap-2">
+                        <span class="text-xs mono px-2.5 py-1 rounded bg-slate-800 text-slate-300">Llama 3.1</span>
+                        <span class="text-xs mono px-2.5 py-1 rounded bg-slate-800 text-slate-300">LoRA / SFT</span>
+                        <span class="text-xs mono px-2.5 py-1 rounded bg-slate-800 text-slate-300">NVIDIA H100</span>
+                        <span class="text-xs mono px-2.5 py-1 rounded bg-slate-800 text-slate-300">Pydantic</span>
+                    </div>
+                    <button onclick="openModal('llm')" class="w-full py-2.5 rounded-xl bg-sky-500/10 hover:bg-sky-500/20 border border-sky-500/30 text-sky-300 text-xs mono font-semibold flex items-center justify-center gap-2 transition">
+                        <i data-lucide="network" class="w-4 h-4"></i> View Architecture Blueprint
+                    </button>
                 </div>
             </div>
 
@@ -217,11 +260,16 @@
                         <li>• 3-layer RAG-triad evaluation harness & LLM-as-judge monitoring</li>
                     </ul>
                 </div>
-                <div class="flex flex-wrap gap-2 pt-6 mt-4 border-t border-white/10">
-                    <span class="text-xs mono px-2.5 py-1 rounded bg-slate-800 text-slate-300">LangGraph</span>
-                    <span class="text-xs mono px-2.5 py-1 rounded bg-slate-800 text-slate-300">Databricks</span>
-                    <span class="text-xs mono px-2.5 py-1 rounded bg-slate-800 text-slate-300">Hybrid RRF</span>
-                    <span class="text-xs mono px-2.5 py-1 rounded bg-slate-800 text-slate-300">CRAG</span>
+                <div class="pt-6 mt-4 border-t border-white/10 space-y-4">
+                    <div class="flex flex-wrap gap-2">
+                        <span class="text-xs mono px-2.5 py-1 rounded bg-slate-800 text-slate-300">LangGraph</span>
+                        <span class="text-xs mono px-2.5 py-1 rounded bg-slate-800 text-slate-300">Databricks</span>
+                        <span class="text-xs mono px-2.5 py-1 rounded bg-slate-800 text-slate-300">Hybrid RRF</span>
+                        <span class="text-xs mono px-2.5 py-1 rounded bg-slate-800 text-slate-300">CRAG</span>
+                    </div>
+                    <button onclick="openModal('rag')" class="w-full py-2.5 rounded-xl bg-purple-500/10 hover:bg-purple-500/20 border border-purple-500/30 text-purple-300 text-xs mono font-semibold flex items-center justify-center gap-2 transition">
+                        <i data-lucide="network" class="w-4 h-4"></i> View Architecture Blueprint
+                    </button>
                 </div>
             </div>
 
@@ -241,11 +289,16 @@
                         <li>• Resource-aware parallel concurrency across PyTest fixtures</li>
                     </ul>
                 </div>
-                <div class="flex flex-wrap gap-2 pt-6 mt-4 border-t border-white/10">
-                    <span class="text-xs mono px-2.5 py-1 rounded bg-slate-800 text-slate-300">ReAct Agents</span>
-                    <span class="text-xs mono px-2.5 py-1 rounded bg-slate-800 text-slate-300">LangGraph</span>
-                    <span class="text-xs mono px-2.5 py-1 rounded bg-slate-800 text-slate-300">PyTest AST</span>
-                    <span class="text-xs mono px-2.5 py-1 rounded bg-slate-800 text-slate-300">GitHub CI/CD</span>
+                <div class="pt-6 mt-4 border-t border-white/10 space-y-4">
+                    <div class="flex flex-wrap gap-2">
+                        <span class="text-xs mono px-2.5 py-1 rounded bg-slate-800 text-slate-300">ReAct Agents</span>
+                        <span class="text-xs mono px-2.5 py-1 rounded bg-slate-800 text-slate-300">LangGraph</span>
+                        <span class="text-xs mono px-2.5 py-1 rounded bg-slate-800 text-slate-300">PyTest AST</span>
+                        <span class="text-xs mono px-2.5 py-1 rounded bg-slate-800 text-slate-300">GitHub CI/CD</span>
+                    </div>
+                    <button onclick="openModal('agents')" class="w-full py-2.5 rounded-xl bg-emerald-500/10 hover:bg-emerald-500/20 border border-emerald-500/30 text-emerald-300 text-xs mono font-semibold flex items-center justify-center gap-2 transition">
+                        <i data-lucide="network" class="w-4 h-4"></i> View Architecture Blueprint
+                    </button>
                 </div>
             </div>
 
@@ -265,15 +318,38 @@
                         <li>• Productionized fine-tuned BERT on AWS SageMaker</li>
                     </ul>
                 </div>
-                <div class="flex flex-wrap gap-2 pt-6 mt-4 border-t border-white/10">
-                    <span class="text-xs mono px-2.5 py-1 rounded bg-slate-800 text-slate-300">PySpark / DLT</span>
-                    <span class="text-xs mono px-2.5 py-1 rounded bg-slate-800 text-slate-300">Unity Catalog</span>
-                    <span class="text-xs mono px-2.5 py-1 rounded bg-slate-800 text-slate-300">XGBoost</span>
-                    <span class="text-xs mono px-2.5 py-1 rounded bg-slate-800 text-slate-300">AWS SageMaker</span>
+                <div class="pt-6 mt-4 border-t border-white/10 space-y-4">
+                    <div class="flex flex-wrap gap-2">
+                        <span class="text-xs mono px-2.5 py-1 rounded bg-slate-800 text-slate-300">PySpark / DLT</span>
+                        <span class="text-xs mono px-2.5 py-1 rounded bg-slate-800 text-slate-300">Unity Catalog</span>
+                        <span class="text-xs mono px-2.5 py-1 rounded bg-slate-800 text-slate-300">XGBoost</span>
+                        <span class="text-xs mono px-2.5 py-1 rounded bg-slate-800 text-slate-300">AWS SageMaker</span>
+                    </div>
+                    <button onclick="openModal('data')" class="w-full py-2.5 rounded-xl bg-amber-500/10 hover:bg-amber-500/20 border border-amber-500/30 text-amber-300 text-xs mono font-semibold flex items-center justify-center gap-2 transition">
+                        <i data-lucide="network" class="w-4 h-4"></i> View Architecture Blueprint
+                    </button>
                 </div>
             </div>
         </div>
     </section>
+
+    <!-- Interactive Architecture Modal Overlay -->
+    <div id="arch-modal" class="fixed inset-0 z-50 hidden items-center justify-center bg-slate-950/80 backdrop-blur-md p-4">
+        <div class="glass max-w-3xl w-full rounded-2xl border border-sky-500/30 overflow-hidden shadow-2xl animate-fadeIn">
+            <div class="bg-slate-900/90 px-6 py-4 border-b border-white/10 flex items-center justify-between">
+                <div class="flex items-center gap-2.5">
+                    <i data-lucide="cpu" class="w-5 h-5 text-sky-400"></i>
+                    <h3 id="modal-title" class="font-bold text-white text-lg">System Architecture Blueprint</h3>
+                </div>
+                <button onclick="closeModal()" class="p-1.5 rounded-lg text-slate-400 hover:text-white hover:bg-white/10 transition">
+                    <i data-lucide="x" class="w-5 h-5"></i>
+                </button>
+            </div>
+            <div id="modal-body" class="p-6 space-y-6 max-h-[80vh] overflow-y-auto">
+                <!-- Populated dynamically via JS -->
+            </div>
+        </div>
+    </div>
 
     <!-- Career & Education Timeline -->
     <section id="experience" class="py-16 px-6 max-w-6xl mx-auto">
@@ -347,8 +423,13 @@
     <script>
         lucide.createIcons();
 
-        // Optional: Paste your Cloudflare Worker URL here if you deploy the Live Groq LLM proxy later
-        const LIVE_LLM_ENDPOINT = ""; 
+        const LIVE_LLM_ENDPOINT = "";
+
+        // Mobile Drawer Toggle
+        function toggleMobileMenu() {
+            const menu = document.getElementById("mobile-menu");
+            menu.classList.toggle("hidden");
+        }
 
         // Copy Email with Toast Notification
         function copyEmail() {
@@ -361,6 +442,25 @@
                 toast.classList.remove("flex");
             }, 3000);
         }
+
+        // Animated Number Counters
+        function animateCounters() {
+            document.querySelectorAll(".counter").forEach(counter => {
+                const target = parseFloat(counter.dataset.target);
+                const decimals = parseInt(counter.dataset.decimals || "0", 10);
+                const duration = 1600;
+                const startTime = performance.now();
+
+                function update(now) {
+                    const progress = Math.min((now - startTime) / duration, 1);
+                    const eased = 1 - Math.pow(1 - progress, 3);
+                    counter.textContent = (target * eased).toFixed(decimals);
+                    if (progress < 1) requestAnimationFrame(update);
+                }
+                requestAnimationFrame(update);
+            });
+        }
+        window.addEventListener("DOMContentLoaded", animateCounters);
 
         // Typewriter Effect
         const roles = [
@@ -389,7 +489,94 @@
         }
         typeLoop();
 
-        // Smart Natural Language Knowledge Base (Fuzzy Intent Matcher)
+        // System Architecture Modal Blueprints
+        const blueprints = {
+            llm: {
+                title: "Llama 3.1-8B Enterprise Asset Normalization Blueprint",
+                subtitle: "Supervised Fine-Tuning (SFT) + LoRA (PEFT) on NVIDIA H100 Infrastructure",
+                steps: [
+                    { stage: "1. Data Curation", detail: "80–90M raw records filtered via SQL/Regex + Few-Shot LLM labeling + Human review → 25,000+ high-quality training pairs." },
+                    { stage: "2. LoRA / SFT Training", detail: "Llama 3.1-8B-Instruct trained on single NVIDIA H100 GPU (FP16 mixed precision) via Hugging Face SFTTrainer & tracked in MLflow." },
+                    { stage: "3. Structured Inference", detail: "Batch inference (1,500+ normalizations/min) with Pydantic schema validation, auto-retry, and confidence-based HITL routing." },
+                    { stage: "4. Continuous Evaluation", detail: "Automated benchmark harness measuring manufacturer, product, and joint accuracy against rule-based baselines." }
+                ],
+                metrics: ["96.7%+ Joint Accuracy", "85% Cost Reduction", "1,500+ Normalizations/Min", "100,000+ Distinct Assets"]
+            },
+            rag: {
+                title: "Adaptive & Corrective RAG (CRAG) Blueprint",
+                subtitle: "LangGraph Orchestration & Hybrid Reciprocal Rank Fusion on Databricks",
+                steps: [
+                    { stage: "1. Intelligent Query Router", detail: "LangGraph router dynamically selects Dense Vector Search, Sparse BM25 keyword search, or metadata filtering across 4,000+ specs." },
+                    { stage: "2. Hybrid RRF Fusion", detail: "Combines semantic + lexical rankings via Reciprocal Rank Fusion (RRF), achieving 97.8% contextual recall & 94.3% precision." },
+                    { stage: "3. CRAG Self-Correction Loop", detail: "LLM relevance grader evaluates retrieved chunks and triggers automated query re-writing and re-retrieval to prevent hallucinations." },
+                    { stage: "4. 3-Layer RAG Triad & Drift Monitoring", detail: "Automated CI regression suite (faithfulness, citation, PII safety, latency) + reference-free LLM-as-judge production telemetry." }
+                ],
+                metrics: ["97.8% Contextual Recall", "94.3% Precision", "75% Faster Search Time", "3-Layer Eval Harness"]
+            },
+            agents: {
+                title: "Autonomous Multi-Agent Python Test Platform Blueprint",
+                subtitle: "LangGraph State Machines, ReAct Reasoning & Self-Healing AST Concurrency",
+                steps: [
+                    { stage: "1. Static AST & Fixture Analysis", detail: "Statically analyzes PyTest fixtures, mocks, mutable state, and inter-test dependencies to enable safe 5-file parallel concurrency." },
+                    { stage: "2. Multi-Agent Synthesis", detail: "Central LangGraph orchestrator coordinates ReAct test-generation agents with deterministic validation and static-analysis stages." },
+                    { stage: "3. Self-Healing Refinement Loop", detail: "Failure-diagnosis agent transforms execution tracebacks into structured root-cause fixes and retry strategies." },
+                    { stage: "4. Private VPC CI/CD Runner", detail: "Self-hosted GitHub Actions runner in private VPC with CIDR allowlisting for secure internal LLM endpoint execution." }
+                ],
+                metrics: ["87% First-Pass Success", "70% Less Manual Debugging", "20+ Enterprise Repos", "5x Safe File Concurrency"]
+            },
+            data: {
+                title: "Unified Object Model (Medallion Lakehouse) & Retail ML Blueprint",
+                subtitle: "Databricks Delta Live Tables, Column-Level CDC & AWS SageMaker Forecasting",
+                steps: [
+                    { stage: "1. Event & Batch Ingestion", detail: "Scalable near-real-time and batch ingestion using Databricks Workflows, Delta Lake, and Unity Catalog governance." },
+                    { stage: "2. Configuration-Based DLT & CDC", detail: "Spark Declarative Pipelines (Bronze → Silver → Gold) with custom column-level Change Data Capture achieving 100% data integrity." },
+                    { stage: "3. Predictive Retail Forecasting", detail: "Engineered lag/rolling/holiday features across millions of retail transactions; deployed XGBoost (97.65% inventory accuracy)." },
+                    { stage: "4. Two-Stage NLP Pipeline", detail: "Fine-tuned BERT on AWS SageMaker for 8-class product categorization (98% accuracy) + 5-level customer review sentiment analysis." }
+                ],
+                metrics: ["100% Data Integrity", "$2.5M Projected Savings", "97.65% Forecast Accuracy", "98% BERT Accuracy"]
+            }
+        };
+
+        function openModal(key) {
+            const data = blueprints[key];
+            if (!data) return;
+            document.getElementById("modal-title").textContent = data.title;
+            const body = document.getElementById("modal-body");
+            body.innerHTML = `
+                <p class="text-xs mono text-sky-400">${data.subtitle}</p>
+                <div class="grid sm:grid-cols-2 gap-4">
+                    ${data.steps.map(s => `
+                        <div class="arch-node p-4 rounded-xl space-y-1.5">
+                            <div class="text-xs mono font-semibold text-white">${s.stage}</div>
+                            <p class="text-xs text-slate-300 leading-relaxed">${s.detail}</p>
+                        </div>
+                    `).join("")}
+                </div>
+                <div class="pt-4 border-t border-white/10">
+                    <div class="text-xs mono text-slate-400 uppercase mb-3">Verified Production Telemetry</div>
+                    <div class="grid grid-cols-2 sm:grid-cols-4 gap-2.5">
+                        ${data.metrics.map(m => `
+                            <div class="px-3 py-2 rounded-lg bg-emerald-500/10 border border-emerald-500/20 text-emerald-300 text-xs mono text-center font-medium">${m}</div>
+                        `).join("")}
+                    </div>
+                </div>
+            `;
+            const modal = document.getElementById("arch-modal");
+            modal.classList.remove("hidden");
+            modal.classList.add("flex");
+        }
+
+        function closeModal() {
+            const modal = document.getElementById("arch-modal");
+            modal.classList.add("hidden");
+            modal.classList.remove("flex");
+        }
+
+        window.addEventListener("keydown", (e) => {
+            if (e.key === "Escape") closeModal();
+        });
+
+        // Smart Natural Language Knowledge Base
         const knowledgeBase = [
             {
                 keywords: ["finetune", "fine-tune", "fine tune", "llama", "lora", "qlora", "sft", "cost", "85%", "96.7", "asset", "h100", "pydantic"],
@@ -457,20 +644,16 @@
 
         async function askAgent(query) {
             const output = document.getElementById("terminal-output");
-            
-            // Append User Query
             const userDiv = document.createElement("div");
             userDiv.className = "text-sky-400 font-medium";
             userDiv.textContent = `> ${query}`;
             output.appendChild(userDiv);
 
-            // Create Agent Response Container
             const replyDiv = document.createElement("div");
             replyDiv.className = "text-emerald-300 pl-3 border-l-2 border-emerald-500/40 leading-relaxed";
             output.appendChild(replyDiv);
             output.scrollTop = output.scrollHeight;
 
-            // If Live LLM Cloudflare Worker is configured, call it; otherwise use Smart NLP Matcher
             if (LIVE_LLM_ENDPOINT) {
                 try {
                     replyDiv.textContent = "Thinking...";
