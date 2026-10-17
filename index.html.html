@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rahul Waghmare | Senior AI/ML & LLM Engineer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #090d16; color: #e2e8f0; }
+        .mono { font-family: 'JetBrains Mono', monospace; }
+        .glass { background: rgba(17, 24, 39, 0.75); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.08); }
+        .glow-card { transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
+        .glow-card:hover { transform: translateY(-4px); border-color: rgba(56, 189, 248, 0.4); box-shadow: 0 12px 30px -10px rgba(56, 189, 248, 0.2); }
+        .gradient-text { background: linear-gradient(135deg, #38bdf8 0%, #818cf8 50%, #c084fc 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .cursor-blink { animation: blink 1s step-end infinite; }
+        @keyframes blink { 50% { opacity: 0; } }
+    </style>
+</head>
+<body class="selection:bg-sky-500 selection:text-white overflow-x-hidden">
+
+    <!-- Ambient Background Glow -->
+    <div class="fixed top-0 left-1/4 w-96 h-96 bg-sky-500/10 rounded-full blur-3xl pointer-events-none -z-10"></div>
+    <div class="fixed bottom-0 right-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl pointer-events-none -z-10"></div>
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 glass border-b border-white/10">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="mono font-bold text-lg tracking-tight text-white flex items-center gap-2">
+                <span class="w-3 h-3 rounded-full bg-sky-400 animate-pulse"></span>
+                rahul.ai<span class="text-sky-400">_</span>
+            </a>
+            <div class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
+                <a href="#ai-terminal" class="hover:text-sky-400 transition">Ask My AI</a>
+                <a href="#projects" class="hover:text-sky-400 transition">Architecture & Projects</a>
+                <a href="#experience" class="hover:text-sky-400 transition">Experience</a>
+                <a href="#skills" class="hover:text-sky-400 transition">Stack</a>
+                <a href="mailto:rwaghmare981@gmail.com" class="px-4 py-2 rounded-lg bg-sky-500 hover:bg-sky-400 text-slate-950 font-semibold transition">Hire / Connect</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-16 px-6 max-w-6xl mx-auto">
+        <div class="grid lg:grid-cols-12 gap-12 items-center">
+            <div class="lg:col-span-7 space-y-6">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-sky-500/10 border border-sky-500/20 text-sky-400 text-xs mono">
+                    <i data-lucide="cpu" class="w-3.5 h-3.5"></i> Senior AI/ML Engineer @ Flexera • IIT Bombay Alumnus
+                </div>
+                <h1 class="text-4xl sm:text-6xl font-bold tracking-tight text-white leading-tight">
+                    Rahul Santram <span class="gradient-text">Waghmare</span>
+                </h1>
+                <div class="h-8 mono text-lg sm:text-xl text-slate-300 flex items-center">
+                    <span>&gt;&nbsp;</span>
+                    <span id="typewriter" class="text-sky-400 font-medium"></span>
+                    <span class="cursor-blink text-sky-400">|</span>
+                </div>
+                <p class="text-slate-400 text-base sm:text-lg leading-relaxed max-w-2xl">
+                    4+ years architecting and deploying production-grade Generative AI, Multi-Agent systems, and Fine-Tuned LLMs on cloud-native infrastructure. Specializing in high-reliability RAG, LoRA/QLoRA fine-tuning, and scalable Lakehouse pipelines.
+                </p>
+                <div class="flex flex-wrap gap-4 pt-2">
+                    <a href="#projects" class="px-6 py-3 rounded-xl bg-sky-500 hover:bg-sky-400 text-slate-950 font-semibold flex items-center gap-2 transition">
+                        Explore Systems <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </a>
+                    <a href="mailto:rwaghmare981@gmail.com" class="px-6 py-3 rounded-xl glass hover:border-sky-400/50 text-white font-medium flex items-center gap-2 transition">
+                        <i data-lucide="mail" class="w-4 h-4 text-sky-400"></i> rwaghmare981@gmail.com
+                    </a>
+                </div>
+            </div>
+
+            <!-- Live Metrics Dashboard Card -->
+            <div class="lg:col-span-5 glass rounded-2xl p-6 border border-white/10 space-y-6">
+                <div class="flex items-center justify-between border-b border-white/10 pb-4">
+                    <span class="mono text-xs text-slate-400 uppercase tracking-wider">Production Impact Telemetry</span>
+                    <span class="px-2 py-0.5 text-xs rounded bg-emerald-500/10 text-emerald-400 mono">● LIVE METRICS</span>
+                </div>
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="p-4 rounded-xl bg-slate-900/80 border border-white/5">
+                        <div class="text-3xl font-bold text-sky-400 mono">96.7%+</div>
+                        <div class="text-xs text-slate-400 mt-1">Llama 3.1 Fine-Tuning Accuracy</div>
+                    </div>
+                    <div class="p-4 rounded-xl bg-slate-900/80 border border-white/5">
+                        <div class="text-3xl font-bold text-purple-400 mono">85%</div>
+                        <div class="text-xs text-slate-400 mt-1">AI Infra & Inference Cost Reduction</div>
+                    </div>
+                    <div class="p-4 rounded-xl bg-slate-900/80 border border-white/5">
+                        <div class="text-3xl font-bold text-emerald-400 mono">97.8%</div>
+                        <div class="text-xs text-slate-400 mt-1">Hybrid RAG Contextual Recall</div>
+                    </div>
+                    <div class="p-4 rounded-xl bg-slate-900/80 border border-white/5">
+                        <div class="text-3xl font-bold text-amber-400 mono">$2.5M</div>
+                        <div class="text-xs text-slate-400 mt-1">Projected Retail Forecast Savings</div>
+                    </div>
+                </div>
+                <div class="text-xs text-slate-400 mono flex items-center justify-between pt-1">
+                    <span>📍 Hyderabad, India</span>
+                    <span>🎓 M.Tech, IIT Bombay</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Agent Terminal Section -->
+    <section id="ai-terminal" class="py-12 px-6 max-w-6xl mx-auto">
+        <div class="glass rounded-2xl overflow-hidden border border-sky-500/30 shadow-2xl">
+            <div class="bg-slate-900/90 px-4 py-3 border-b border-white/10 flex items-center justify-between">
+                <div class="flex items-center gap-2">
+                    <div class="w-3 h-3 rounded-full bg-rose-500"></div>
+                    <div class="w-3 h-3 rounded-full bg-amber-500"></div>
+                    <div class="w-3 h-3 rounded-full bg-emerald-500"></div>
+                    <span class="ml-2 mono text-xs text-slate-400">rahul-agent-cli — LangGraph Interactive Assistant</span>
+                </div>
+                <span class="mono text-xs text-sky-400">Model: Llama-3.1-8B-SFT</span>
+            </div>
+            <div class="p-6 space-y-4">
+                <div id="terminal-output" class="mono text-sm space-y-3 max-h-64 overflow-y-auto pr-2">
+                    <div class="text-slate-400">[SYSTEM] Initialized Rahul's Portfolio RAG Agent. Click a prompt below or type a query (`finetune`, `rag`, `agents`, `skills`, `contact`).</div>
+                </div>
+                <!-- Quick Prompt Chips -->
+                <div class="flex flex-wrap gap-2 pt-2">
+                    <button onclick="runCommand('finetune')" class="text-xs mono px-3 py-1.5 rounded-lg bg-sky-500/10 hover:bg-sky-500/20 text-sky-300 border border-sky-500/20 transition">⚡ How did you fine-tune Llama 3.1?</button>
+                    <button onclick="runCommand('rag')" class="text-xs mono px-3 py-1.5 rounded-lg bg-purple-500/10 hover:bg-purple-500/20 text-purple-300 border border-purple-500/20 transition">🔍 Explain Adaptive CRAG Architecture</button>
+                    <button onclick="runCommand('agents')" class="text-xs mono px-3 py-1.5 rounded-lg bg-emerald-500/10 hover:bg-emerald-500/20 text-emerald-300 border border-emerald-500/20 transition">🤖 Multi-Agent Test Generator</button>
+                    <button onclick="runCommand('contact')" class="text-xs mono px-3 py-1.5 rounded-lg bg-amber-500/10 hover:bg-amber-500/20 text-amber-300 border border-amber-500/20 transition">📬 Contact Details</button>
+                </div>
+                <!-- Input Bar -->
+                <form onsubmit="handleTerminalSubmit(event)" class="flex items-center gap-3 pt-2 border-t border-white/10">
+                    <span class="mono text-sky-400 font-bold">&gt;</span>
+                    <input id="terminal-input" type="text" placeholder="Ask about Rahul's LLM fine-tuning, RAG pipelines, or tech stack..." class="w-full bg-transparent text-sm mono text-white focus:outline-none">
+                    <button type="submit" class="px-3 py-1 rounded bg-sky-500 text-slate-950 font-semibold text-xs mono hover:bg-sky-400">Run</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Filterable Projects Section -->
+    <section id="projects" class="py-16 px-6 max-w-6xl mx-auto space-y-8">
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
+            <div>
+                <h2 class="text-3xl font-bold text-white">Production AI & Data Systems</h2>
+                <p class="text-slate-400 text-sm mt-1">Filter by domain to inspect architecture, scale, and business outcomes.</p>
+            </div>
+            <!-- Interactive Filter Buttons -->
+            <div class="flex flex-wrap gap-2" id="project-filters">
+                <button onclick="filterProjects('all')" class="filter-btn active px-4 py-1.5 rounded-lg text-xs mono bg-sky-500 text-slate-950 font-semibold transition">All Systems</button>
+                <button onclick="filterProjects('llm')" class="filter-btn px-4 py-1.5 rounded-lg text-xs mono glass text-slate-300 hover:text-white transition">LLM Fine-Tuning</button>
+                <button onclick="filterProjects('rag')" class="filter-btn px-4 py-1.5 rounded-lg text-xs mono glass text-slate-300 hover:text-white transition">RAG & Multi-Agent</button>
+                <button onclick="filterProjects('data')" class="filter-btn px-4 py-1.5 rounded-lg text-xs mono glass text-slate-300 hover:text-white transition">Lakehouse & ML</button>
+            </div>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-6" id="projects-grid">
+            <!-- Project 1 -->
+            <div class="project-card glass glow-card rounded-2xl p-6 flex flex-col justify-between" data-category="llm">
+                <div class="space-y-4">
+                    <div class="flex justify-between items-start">
+                        <span class="px-3 py-1 rounded-full text-xs mono bg-sky-500/10 text-sky-400 border border-sky-500/20">LLM Fine-Tuning • Flexera</span>
+                        <span class="mono text-xs text-emerald-400">1,500+ norm/min</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-white">Enterprise Asset Normalization Platform</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        Fine-tuned <strong>Llama 3.1-8B-Instruct</strong> using SFT and LoRA (PEFT) on NVIDIA H100 GPUs (FP16) to standardize software and manufacturer names across 100,000+ distinct enterprise assets. Curated 25,000+ training samples from 80–90M raw records.
+                    </p>
+                    <ul class="text-xs text-slate-300 space-y-1.5 mono">
+                        <li>• 96.7%+ accuracy & 85% reduction in AI inference costs</li>
+                        <li>• Pydantic structured outputs + HITL confidence routing</li>
+                    </ul>
+                </div>
+                <div class="flex flex-wrap gap-2 pt-6 mt-4 border-t border-white/10">
+                    <span class="text-xs mono px-2.5 py-1 rounded bg-slate-800 text-slate-300">Llama 3.1</span>
+                    <span class="text-xs mono px-2.5 py-1 rounded bg-slate-800 text-slate-300">LoRA / SFT</span>
+                    <span class="text-xs mono px-2.5 py-1 rounded bg-slate-800 text-slate-300">PyTorch</span>
+                    <span class="text-xs mono px-2.5 py-1 rounded bg-slate-800 text-slate-300">MLflow</span>
+                </div>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="project-card glass glow-card rounded-2xl p-6 flex flex-col justify-between" data-category="rag">
+                <div class="space-y-4">
+                    <div class="flex justify-between items-start">
+                        <span class="px-3 py-1 rounded-full text-xs mono bg-purple-500/10 text-purple-400 border border-purple-500/20">Adaptive RAG • Flexera</span>
+                        <span class="mono text-xs text-emerald-400">97.8% Recall</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-white">Corrective RAG Document Assistant</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        Architected a production RAG pipeline on Databricks with <strong>LangGraph</strong> across 4,000+ technical specs. Built an intelligent query router combining Dense Vector Search, Sparse BM25, and Reciprocal Rank Fusion (RRF).
+                    </p>
+                    <ul class="text-xs text-slate-300 space-y-1.5 mono">
+                        <li>• 94.3% contextual precision & 75% faster company-wide lookup</li>
+                        <li>• 3-layer RAG-triad evaluation harness & LLM-as-judge monitoring</li>
+                    </ul>
+                </div>
+                <div class="flex flex-wrap gap-2 pt-6 mt-4 border-t border-white/10">
+                    <span class="text-xs mono px-2.5 py-1 rounded bg-slate-800 text-slate-300">LangGraph</span>
+                    <span class="text-xs mono px-2.5 py-1 rounded bg-slate-800 text-slate-300">Databricks</span>
+                    <span class="text-xs mono px-2.5 py-1 rounded bg-slate-800 text-slate-300">Hybrid RRF</span>
+                    <span class="text-xs mono px-2.5 py-1 rounded bg-slate-800 text-slate-300">CRAG</span>
+                </div>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="project-card glass glow-card rounded-2xl p-6 flex flex-col justify-between" data-category="rag">
+                <div class="space-y-4">
+                    <div class="flex justify-between items-start">
+                        <span class="px-3 py-1 rounded-full text-xs mono bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">Multi-Agent AI • Flexera</span>
+                        <span class="mono text-xs text-emerald-400">87% Pass Rate</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-white">Autonomous Multi-Agent Test Platform</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        Built a centrally orchestrated LangGraph & ReAct multi-agent system for automated Python test synthesis, static AST analysis, and self-healing failure diagnosis across 20+ enterprise repositories.
+                    </p>
+                    <ul class="text-xs text-slate-300 space-y-1.5 mono">
+                        <li>• Reduced manual debugging effort by 70%</li>
+                        <li>• Resource-aware parallel concurrency across PyTest fixtures</li>
+                    </ul>
+                </div>
+                <div class="flex flex-wrap gap-2 pt-6 mt-4 border-t border-white/10">
+                    <span class="text-xs mono px-2.5 py-1 rounded bg-slate-800 text-slate-300">ReAct Agents</span>
+                    <span class="text-xs mono px-2.5 py-1 rounded bg-slate-800 text-slate-300">LangGraph</span>
+                    <span class="text-xs mono px-2.5 py-1 rounded bg-slate-800 text-slate-300">PyTest AST</span>
+                    <span class="text-xs mono px-2.5 py-1 rounded bg-slate-800 text-slate-300">GitHub CI/CD</span>
+                </div>
+            </div>
+
+            <!-- Project 4 -->
+            <div class="project-card glass glow-card rounded-2xl p-6 flex flex-col justify-between" data-category="data">
+                <div class="space-y-4">
+                    <div class="flex justify-between items-start">
+                        <span class="px-3 py-1 rounded-full text-xs mono bg-amber-500/10 text-amber-400 border border-amber-500/20">Medallion & Predictive ML</span>
+                        <span class="mono text-xs text-emerald-400">100% Data Integrity</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-white">Unified Object Model & Retail Forecasting</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        Led Databricks Medallion architecture (Bronze-Silver-Gold) with Delta Live Tables and column-level CDC at Flexera. Previously delivered XGBoost inventory forecasting (97.65% accuracy, $2.5M savings) and BERT classification (98% accuracy) at Genpact.
+                    </p>
+                    <ul class="text-xs text-slate-300 space-y-1.5 mono">
+                        <li>• Mentored 4 engineers on Spark Declarative Pipelines & Unity Catalog</li>
+                        <li>• Productionized fine-tuned BERT on AWS SageMaker</li>
+                    </ul>
+                </div>
+                <div class="flex flex-wrap gap-2 pt-6 mt-4 border-t border-white/10">
+                    <span class="text-xs mono px-2.5 py-1 rounded bg-slate-800 text-slate-300">PySpark / DLT</span>
+                    <span class="text-xs mono px-2.5 py-1 rounded bg-slate-800 text-slate-300">Unity Catalog</span>
+                    <span class="text-xs mono px-2.5 py-1 rounded bg-slate-800 text-slate-300">XGBoost</span>
+                    <span class="text-xs mono px-2.5 py-1 rounded bg-slate-800 text-slate-300">AWS SageMaker</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Career & Education Timeline -->
+    <section id="experience" class="py-16 px-6 max-w-6xl mx-auto">
+        <h2 class="text-3xl font-bold text-white mb-8">Career & Academic Journey</h2>
+        <div class="space-y-6 border-l-2 border-sky-500/30 ml-3 pl-6">
+            <div class="relative glass p-6 rounded-2xl">
+                <span class="absolute -left-[33px] top-6 w-4 h-4 rounded-full bg-sky-400 border-4 border-slate-950"></span>
+                <div class="flex flex-wrap justify-between items-center gap-2">
+                    <h3 class="text-lg font-bold text-white">Senior Software Development Engineer (AI/ML)</h3>
+                    <span class="mono text-xs text-sky-400">Mar 2024 – Present (Promoted Apr 2026)</span>
+                </div>
+                <p class="text-sm text-slate-400 mt-1">Flexera • Leading LLM fine-tuning, Adaptive RAG, Multi-Agent test platforms, and Databricks Medallion architecture while mentoring a team of 4 engineers.</p>
+            </div>
+
+            <div class="relative glass p-6 rounded-2xl">
+                <span class="absolute -left-[33px] top-6 w-4 h-4 rounded-full bg-purple-400 border-4 border-slate-950"></span>
+                <div class="flex flex-wrap justify-between items-center gap-2">
+                    <h3 class="text-lg font-bold text-white">Consultant — AI/ML Engineering</h3>
+                    <span class="mono text-xs text-purple-400">Aug 2022 – Feb 2024</span>
+                </div>
+                <p class="text-sm text-slate-400 mt-1">Genpact India Pvt Ltd • Built XGBoost retail inventory & COGS forecasting models ($2.5M projected savings) and two-stage BERT categorization & sentiment pipelines on AWS SageMaker.</p>
+            </div>
+
+            <div class="relative glass p-6 rounded-2xl">
+                <span class="absolute -left-[33px] top-6 w-4 h-4 rounded-full bg-emerald-400 border-4 border-slate-950"></span>
+                <div class="flex flex-wrap justify-between items-center gap-2">
+                    <h3 class="text-lg font-bold text-white">M.Tech in Geo-Informatics • IIT Bombay</h3>
+                    <span class="mono text-xs text-emerald-400">Aug 2020 – Jul 2022 | CGPA: 7.83</span>
+                </div>
+                <p class="text-sm text-slate-400 mt-1">Teaching Assistant at Agro-Informatics Lab for 40+ students; mentored M.Tech students on project implementation. (B.E. in Computer Engineering, SKN Sinhgad Institute, 2014–2017).</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technical Skills Matrix -->
+    <section id="skills" class="py-12 px-6 max-w-6xl mx-auto">
+        <h2 class="text-2xl font-bold text-white mb-6">Technical Arsenal</h2>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            <div class="glass p-5 rounded-xl">
+                <div class="text-sky-400 mono text-xs uppercase mb-2">GenAI & LLMs</div>
+                <p class="text-sm text-slate-300">LoRA, QLoRA, SFT, Llama 3.1, OpenAI, Claude, Hugging Face, Prompt Engineering, MCP, Structured Outputs</p>
+            </div>
+            <div class="glass p-5 rounded-xl">
+                <div class="text-purple-400 mono text-xs uppercase mb-2">Agentic & RAG</div>
+                <p class="text-sm text-slate-300">LangGraph, LangChain, ReAct Agents, Hybrid Retrieval (BM25 + Dense), RRF, FAISS, Chroma, Pinecone, Databricks Vector Search</p>
+            </div>
+            <div class="glass p-5 rounded-xl">
+                <div class="text-emerald-400 mono text-xs uppercase mb-2">Data & Lakehouse</div>
+                <p class="text-sm text-slate-300">Python, SQL, C++, PySpark, Databricks, Delta Live Tables (DLT), Unity Catalog, Medallion Architecture, CDC</p>
+            </div>
+            <div class="glass p-5 rounded-xl">
+                <div class="text-amber-400 mono text-xs uppercase mb-2">Cloud & MLOps</div>
+                <p class="text-sm text-slate-300">AWS (SageMaker, Bedrock, S3, EC2, Lambda), Docker, Kubernetes, Terraform, MLflow, CloudWatch, CI/CD</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-white/10 py-10 px-6 text-center text-xs text-slate-500 mono">
+        Built for Rahul Santram Waghmare • Hyderabad, Telangana, India • +91-9110596243 | rwaghmare981@gmail.com
+    </footer>
+
+    <script>
+        lucide.createIcons();
+
+        // Typewriter Effect
+        const roles = [
+            "Architecting Production RAG & LangGraph Agents",
+            "Fine-Tuning Llama 3.1 with LoRA / QLoRA / SFT",
+            "Scaling Databricks Lakehouse & MLOps Pipelines",
+            "Reducing AI Infrastructure Costs by 85%"
+        ];
+        let roleIdx = 0, charIdx = 0, deleting = false;
+        const typeEl = document.getElementById("typewriter");
+
+        function typeLoop() {
+            const current = roles[roleIdx];
+            typeEl.textContent = current.substring(0, charIdx);
+            if (!deleting && charIdx < current.length) {
+                charIdx++;
+                setTimeout(typeLoop, 55);
+            } else if (deleting && charIdx > 0) {
+                charIdx--;
+                setTimeout(typeLoop, 30);
+            } else {
+                deleting = !deleting;
+                if (!deleting) roleIdx = (roleIdx + 1) % roles.length;
+                setTimeout(typeLoop, deleting ? 1800 : 300);
+            }
+        }
+        typeLoop();
+
+        // Interactive AI Terminal
+        const responses = {
+            finetune: "Fine-tuned Llama 3.1-8B-Instruct using SFT & LoRA on NVIDIA H100 GPUs across 25,000+ curated samples (from 80-90M records). Achieved 96.7%+ accuracy, processed 1,500+ normalizations/min, and cut inference costs by 85%.",
+            rag: "Built an Adaptive & Corrective RAG (CRAG) pipeline on Databricks using LangGraph across 4,000+ enterprise docs. Combines Dense Vector + Sparse BM25 via Reciprocal Rank Fusion (RRF) for 97.8% recall and 75% faster lookup.",
+            agents: "Architected a Multi-Agent Python Test Generation platform using LangGraph & ReAct with self-healing failure diagnosis and PyTest AST concurrency—achieving 87% first-pass test success and cutting debugging effort by 70%.",
+            skills: "Core Stack: Python, PyTorch, Hugging Face (LoRA/QLoRA/SFT), LangGraph, LangChain, Databricks (DLT, Unity Catalog), PySpark, AWS (SageMaker, Bedrock), Docker, Kubernetes, Terraform, MLflow.",
+            contact: "Reach Rahul at rwaghmare981@gmail.com | +91-9110596243 / +91-8605296243 | Based in Hyderabad, India."
+        };
+
+        function runCommand(cmd) {
+            const output = document.getElementById("terminal-output");
+            const key = cmd.toLowerCase().trim();
+            const reply = responses[key] || "Try commands like: 'finetune', 'rag', 'agents', 'skills', or 'contact'.";
+            output.innerHTML += `<div class="text-sky-400">&gt; ${cmd}</div><div class="text-emerald-300 pl-3 border-l-2 border-emerald-500/40">${reply}</div>`;
+            output.scrollTop = output.scrollHeight;
+        }
+
+        function handleTerminalSubmit(e) {
+            e.preventDefault();
+            const input = document.getElementById("terminal-input");
+            if (!input.value.trim()) return;
+            runCommand(input.value);
+            input.value = "";
+        }
+
+        // Project Filtering
+        function filterProjects(category) {
+            document.querySelectorAll(".project-card").forEach(card => {
+                card.style.display = (category === "all" || card.dataset.category === category) ? "flex" : "none";
+            });
+            document.querySelectorAll(".filter-btn").forEach(btn => {
+                btn.classList.remove("bg-sky-500", "text-slate-950", "font-semibold");
+                btn.classList.add("glass", "text-slate-300");
+            });
+            event.target.classList.add("bg-sky-500", "text-slate-950", "font-semibold");
+            event.target.classList.remove("glass", "text-slate-300");
+        }
+    </script>
+</body>
+</html>
