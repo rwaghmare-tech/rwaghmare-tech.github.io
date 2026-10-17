@@ -24,19 +24,34 @@
     <div class="fixed top-0 left-1/4 w-96 h-96 bg-sky-500/10 rounded-full blur-3xl pointer-events-none -z-10"></div>
     <div class="fixed bottom-0 right-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl pointer-events-none -z-10"></div>
 
+    <!-- Copy Email Toast Notification -->
+    <div id="toast" class="fixed bottom-6 right-6 z-50 hidden items-center gap-2 px-4 py-3 rounded-xl bg-emerald-500 text-slate-950 font-semibold text-sm shadow-xl transition-all">
+        <i data-lucide="check-circle-2" class="w-4 h-4"></i>
+        <span>Copied rwaghmare981@gmail.com to clipboard!</span>
+    </div>
+
     <!-- Navigation -->
-    <nav class="fixed top-0 w-full z-50 glass border-b border-white/10">
+    <nav class="fixed top-0 w-full z-40 glass border-b border-white/10">
         <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="#" class="mono font-bold text-lg tracking-tight text-white flex items-center gap-2">
-                <span class="w-3 h-3 rounded-full bg-sky-400 animate-pulse"></span>
-                rahul.ai<span class="text-sky-400">_</span>
+            <a href="#" class="mono font-bold text-lg tracking-tight text-white flex items-center gap-2.5">
+                <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-sky-400 to-purple-500 flex items-center justify-center text-slate-950 font-extrabold text-sm">RW</div>
+                <span>rahul.ai<span class="text-sky-400">_</span></span>
             </a>
-            <div class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
+            <div class="hidden md:flex items-center gap-6 text-sm font-medium text-slate-300">
                 <a href="#ai-terminal" class="hover:text-sky-400 transition">Ask My AI</a>
-                <a href="#projects" class="hover:text-sky-400 transition">Architecture & Projects</a>
+                <a href="#projects" class="hover:text-sky-400 transition">Systems</a>
                 <a href="#experience" class="hover:text-sky-400 transition">Experience</a>
                 <a href="#skills" class="hover:text-sky-400 transition">Stack</a>
-                <a href="mailto:rwaghmare981@gmail.com" class="px-4 py-2 rounded-lg bg-sky-500 hover:bg-sky-400 text-slate-950 font-semibold transition">Hire / Connect</a>
+                <div class="h-4 w-px bg-white/15"></div>
+                <a href="https://github.com/rwaghmare-tech" target="_blank" rel="noopener" class="text-slate-300 hover:text-white transition" title="GitHub">
+                    <i data-lucide="github" class="w-5 h-5"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/rwaghmare29" target="_blank" rel="noopener" class="text-slate-300 hover:text-sky-400 transition" title="LinkedIn">
+                    <i data-lucide="linkedin" class="w-5 h-5"></i>
+                </a>
+                <a href="Rahul_Waghmare_Resume.pdf" download class="px-4 py-2 rounded-lg bg-sky-500 hover:bg-sky-400 text-slate-950 font-semibold flex items-center gap-1.5 transition">
+                    <i data-lucide="download" class="w-4 h-4"></i> Resume
+                </a>
             </div>
         </div>
     </nav>
@@ -59,12 +74,20 @@
                 <p class="text-slate-400 text-base sm:text-lg leading-relaxed max-w-2xl">
                     4+ years architecting and deploying production-grade Generative AI, Multi-Agent systems, and Fine-Tuned LLMs on cloud-native infrastructure. Specializing in high-reliability RAG, LoRA/QLoRA fine-tuning, and scalable Lakehouse pipelines.
                 </p>
-                <div class="flex flex-wrap gap-4 pt-2">
-                    <a href="#projects" class="px-6 py-3 rounded-xl bg-sky-500 hover:bg-sky-400 text-slate-950 font-semibold flex items-center gap-2 transition">
-                        Explore Systems <i data-lucide="arrow-right" class="w-4 h-4"></i>
+
+                <!-- Recruiter Action Bar -->
+                <div class="flex flex-wrap items-center gap-3 pt-2">
+                    <a href="Rahul_Waghmare_Resume.pdf" download class="px-5 py-3 rounded-xl bg-sky-500 hover:bg-sky-400 text-slate-950 font-semibold flex items-center gap-2 transition shadow-lg shadow-sky-500/20">
+                        <i data-lucide="file-down" class="w-4 h-4"></i> Download Resume (PDF)
                     </a>
-                    <a href="mailto:rwaghmare981@gmail.com" class="px-6 py-3 rounded-xl glass hover:border-sky-400/50 text-white font-medium flex items-center gap-2 transition">
-                        <i data-lucide="mail" class="w-4 h-4 text-sky-400"></i> rwaghmare981@gmail.com
+                    <button onclick="copyEmail()" class="px-4 py-3 rounded-xl glass hover:border-sky-400/50 text-white font-medium flex items-center gap-2 transition" title="Click to copy email">
+                        <i data-lucide="copy" class="w-4 h-4 text-sky-400"></i> rwaghmare981@gmail.com
+                    </button>
+                    <a href="https://www.linkedin.com/in/rwaghmare29" target="_blank" rel="noopener" class="p-3 rounded-xl glass hover:border-sky-400/50 text-slate-300 hover:text-sky-400 transition" title="LinkedIn Profile">
+                        <i data-lucide="linkedin" class="w-5 h-5"></i>
+                    </a>
+                    <a href="https://github.com/rwaghmare-tech" target="_blank" rel="noopener" class="p-3 rounded-xl glass hover:border-sky-400/50 text-slate-300 hover:text-white transition" title="GitHub Profile">
+                        <i data-lucide="github" class="w-5 h-5"></i>
                     </a>
                 </div>
             </div>
@@ -73,7 +96,7 @@
             <div class="lg:col-span-5 glass rounded-2xl p-6 border border-white/10 space-y-6">
                 <div class="flex items-center justify-between border-b border-white/10 pb-4">
                     <span class="mono text-xs text-slate-400 uppercase tracking-wider">Production Impact Telemetry</span>
-                    <span class="px-2 py-0.5 text-xs rounded bg-emerald-500/10 text-emerald-400 mono">● LIVE METRICS</span>
+                    <span class="px-2 py-0.5 text-xs rounded bg-emerald-500/10 text-emerald-400 mono">● VERIFIED METRICS</span>
                 </div>
                 <div class="grid grid-cols-2 gap-4">
                     <div class="p-4 rounded-xl bg-slate-900/80 border border-white/5">
@@ -104,31 +127,35 @@
     <!-- Interactive Agent Terminal Section -->
     <section id="ai-terminal" class="py-12 px-6 max-w-6xl mx-auto">
         <div class="glass rounded-2xl overflow-hidden border border-sky-500/30 shadow-2xl">
-            <div class="bg-slate-900/90 px-4 py-3 border-b border-white/10 flex items-center justify-between">
+            <div class="bg-slate-900/90 px-4 py-3 border-b border-white/10 flex flex-wrap items-center justify-between gap-2">
                 <div class="flex items-center gap-2">
                     <div class="w-3 h-3 rounded-full bg-rose-500"></div>
                     <div class="w-3 h-3 rounded-full bg-amber-500"></div>
                     <div class="w-3 h-3 rounded-full bg-emerald-500"></div>
-                    <span class="ml-2 mono text-xs text-slate-400">rahul-agent-cli — LangGraph Interactive Assistant</span>
+                    <span class="ml-2 mono text-xs text-slate-400">rahul-agent-cli — Interactive Resume & Architecture Assistant</span>
                 </div>
-                <span class="mono text-xs text-sky-400">Model: Llama-3.1-8B-SFT</span>
+                <div class="flex items-center gap-3">
+                    <span id="agent-mode-badge" class="mono text-xs px-2 py-0.5 rounded bg-sky-500/10 text-sky-400 border border-sky-500/20">● Smart NLP Engine Ready</span>
+                    <button onclick="clearTerminal()" class="text-xs mono text-slate-400 hover:text-white transition">Clear</button>
+                </div>
             </div>
             <div class="p-6 space-y-4">
-                <div id="terminal-output" class="mono text-sm space-y-3 max-h-64 overflow-y-auto pr-2">
-                    <div class="text-slate-400">[SYSTEM] Initialized Rahul's Portfolio RAG Agent. Click a prompt below or type a query (`finetune`, `rag`, `agents`, `skills`, `contact`).</div>
+                <div id="terminal-output" class="mono text-sm space-y-3 max-h-80 overflow-y-auto pr-2">
+                    <div class="text-slate-400">[SYSTEM] Ask me anything in natural language about Rahul's LLM fine-tuning, Adaptive RAG, Multi-Agent systems, Databricks lakehouse, IIT Bombay background, or contact details.</div>
                 </div>
                 <!-- Quick Prompt Chips -->
                 <div class="flex flex-wrap gap-2 pt-2">
-                    <button onclick="runCommand('finetune')" class="text-xs mono px-3 py-1.5 rounded-lg bg-sky-500/10 hover:bg-sky-500/20 text-sky-300 border border-sky-500/20 transition">⚡ How did you fine-tune Llama 3.1?</button>
-                    <button onclick="runCommand('rag')" class="text-xs mono px-3 py-1.5 rounded-lg bg-purple-500/10 hover:bg-purple-500/20 text-purple-300 border border-purple-500/20 transition">🔍 Explain Adaptive CRAG Architecture</button>
-                    <button onclick="runCommand('agents')" class="text-xs mono px-3 py-1.5 rounded-lg bg-emerald-500/10 hover:bg-emerald-500/20 text-emerald-300 border border-emerald-500/20 transition">🤖 Multi-Agent Test Generator</button>
-                    <button onclick="runCommand('contact')" class="text-xs mono px-3 py-1.5 rounded-lg bg-amber-500/10 hover:bg-amber-500/20 text-amber-300 border border-amber-500/20 transition">📬 Contact Details</button>
+                    <button onclick="askAgent('How did Rahul fine-tune Llama 3.1 and cut costs by 85%?')" class="text-xs mono px-3 py-1.5 rounded-lg bg-sky-500/10 hover:bg-sky-500/20 text-sky-300 border border-sky-500/20 transition">⚡ Fine-Tuning Llama 3.1</button>
+                    <button onclick="askAgent('Explain the Adaptive & Corrective RAG architecture on Databricks')" class="text-xs mono px-3 py-1.5 rounded-lg bg-purple-500/10 hover:bg-purple-500/20 text-purple-300 border border-purple-500/20 transition">🔍 Adaptive CRAG Pipeline</button>
+                    <button onclick="askAgent('How does the Multi-Agent Python test generation platform work?')" class="text-xs mono px-3 py-1.5 rounded-lg bg-emerald-500/10 hover:bg-emerald-500/20 text-emerald-300 border border-emerald-500/20 transition">🤖 Multi-Agent Platform</button>
+                    <button onclick="askAgent('Tell me about Rahul\'s Databricks Medallion and Genpact ML work')" class="text-xs mono px-3 py-1.5 rounded-lg bg-amber-500/10 hover:bg-amber-500/20 text-amber-300 border border-amber-500/20 transition">📊 Databricks & Genpact ML</button>
+                    <button onclick="askAgent('What is Rahul\'s education and how can I contact or hire him?')" class="text-xs mono px-3 py-1.5 rounded-lg bg-rose-500/10 hover:bg-rose-500/20 text-rose-300 border border-rose-500/20 transition">🎓 IIT Bombay & Contact</button>
                 </div>
                 <!-- Input Bar -->
                 <form onsubmit="handleTerminalSubmit(event)" class="flex items-center gap-3 pt-2 border-t border-white/10">
                     <span class="mono text-sky-400 font-bold">&gt;</span>
-                    <input id="terminal-input" type="text" placeholder="Ask about Rahul's LLM fine-tuning, RAG pipelines, or tech stack..." class="w-full bg-transparent text-sm mono text-white focus:outline-none">
-                    <button type="submit" class="px-3 py-1 rounded bg-sky-500 text-slate-950 font-semibold text-xs mono hover:bg-sky-400">Run</button>
+                    <input id="terminal-input" type="text" placeholder="Ask any question (e.g., 'What is his experience with LangGraph?' or 'Where did he study?')..." class="w-full bg-transparent text-sm mono text-white focus:outline-none">
+                    <button type="submit" class="px-4 py-1.5 rounded-lg bg-sky-500 text-slate-950 font-semibold text-xs mono hover:bg-sky-400 transition">Send</button>
                 </form>
             </div>
         </div>
@@ -141,12 +168,11 @@
                 <h2 class="text-3xl font-bold text-white">Production AI & Data Systems</h2>
                 <p class="text-slate-400 text-sm mt-1">Filter by domain to inspect architecture, scale, and business outcomes.</p>
             </div>
-            <!-- Interactive Filter Buttons -->
             <div class="flex flex-wrap gap-2" id="project-filters">
-                <button onclick="filterProjects('all')" class="filter-btn active px-4 py-1.5 rounded-lg text-xs mono bg-sky-500 text-slate-950 font-semibold transition">All Systems</button>
-                <button onclick="filterProjects('llm')" class="filter-btn px-4 py-1.5 rounded-lg text-xs mono glass text-slate-300 hover:text-white transition">LLM Fine-Tuning</button>
-                <button onclick="filterProjects('rag')" class="filter-btn px-4 py-1.5 rounded-lg text-xs mono glass text-slate-300 hover:text-white transition">RAG & Multi-Agent</button>
-                <button onclick="filterProjects('data')" class="filter-btn px-4 py-1.5 rounded-lg text-xs mono glass text-slate-300 hover:text-white transition">Lakehouse & ML</button>
+                <button onclick="filterProjects('all', this)" class="filter-btn px-4 py-1.5 rounded-lg text-xs mono bg-sky-500 text-slate-950 font-semibold transition">All Systems</button>
+                <button onclick="filterProjects('llm', this)" class="filter-btn px-4 py-1.5 rounded-lg text-xs mono glass text-slate-300 hover:text-white transition">LLM Fine-Tuning</button>
+                <button onclick="filterProjects('rag', this)" class="filter-btn px-4 py-1.5 rounded-lg text-xs mono glass text-slate-300 hover:text-white transition">RAG & Multi-Agent</button>
+                <button onclick="filterProjects('data', this)" class="filter-btn px-4 py-1.5 rounded-lg text-xs mono glass text-slate-300 hover:text-white transition">Lakehouse & ML</button>
             </div>
         </div>
 
@@ -306,12 +332,35 @@
     </section>
 
     <!-- Footer -->
-    <footer class="border-t border-white/10 py-10 px-6 text-center text-xs text-slate-500 mono">
-        Built for Rahul Santram Waghmare • Hyderabad, Telangana, India • +91-9110596243 | rwaghmare981@gmail.com
+    <footer class="border-t border-white/10 py-10 px-6">
+        <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-400 mono">
+            <div>Rahul Santram Waghmare • Senior AI/ML Engineer • Hyderabad, India</div>
+            <div class="flex items-center gap-6">
+                <a href="https://www.linkedin.com/in/rwaghmare29" target="_blank" rel="noopener" class="hover:text-sky-400 transition">LinkedIn</a>
+                <a href="https://github.com/rwaghmare-tech" target="_blank" rel="noopener" class="hover:text-white transition">GitHub</a>
+                <a href="Rahul_Waghmare_Resume.pdf" download class="hover:text-sky-400 transition">Resume PDF</a>
+                <button onclick="copyEmail()" class="hover:text-emerald-400 transition">rwaghmare981@gmail.com</button>
+            </div>
+        </div>
     </footer>
 
     <script>
         lucide.createIcons();
+
+        // Optional: Paste your Cloudflare Worker URL here if you deploy the Live Groq LLM proxy later
+        const LIVE_LLM_ENDPOINT = ""; 
+
+        // Copy Email with Toast Notification
+        function copyEmail() {
+            navigator.clipboard.writeText("rwaghmare981@gmail.com");
+            const toast = document.getElementById("toast");
+            toast.classList.remove("hidden");
+            toast.classList.add("flex");
+            setTimeout(() => {
+                toast.classList.add("hidden");
+                toast.classList.remove("flex");
+            }, 3000);
+        }
 
         // Typewriter Effect
         const roles = [
@@ -340,33 +389,123 @@
         }
         typeLoop();
 
-        // Interactive AI Terminal
-        const responses = {
-            finetune: "Fine-tuned Llama 3.1-8B-Instruct using SFT & LoRA on NVIDIA H100 GPUs across 25,000+ curated samples (from 80-90M records). Achieved 96.7%+ accuracy, processed 1,500+ normalizations/min, and cut inference costs by 85%.",
-            rag: "Built an Adaptive & Corrective RAG (CRAG) pipeline on Databricks using LangGraph across 4,000+ enterprise docs. Combines Dense Vector + Sparse BM25 via Reciprocal Rank Fusion (RRF) for 97.8% recall and 75% faster lookup.",
-            agents: "Architected a Multi-Agent Python Test Generation platform using LangGraph & ReAct with self-healing failure diagnosis and PyTest AST concurrency—achieving 87% first-pass test success and cutting debugging effort by 70%.",
-            skills: "Core Stack: Python, PyTorch, Hugging Face (LoRA/QLoRA/SFT), LangGraph, LangChain, Databricks (DLT, Unity Catalog), PySpark, AWS (SageMaker, Bedrock), Docker, Kubernetes, Terraform, MLflow.",
-            contact: "Reach Rahul at rwaghmare981@gmail.com | +91-9110596243 / +91-8605296243 | Based in Hyderabad, India."
-        };
+        // Smart Natural Language Knowledge Base (Fuzzy Intent Matcher)
+        const knowledgeBase = [
+            {
+                keywords: ["finetune", "fine-tune", "fine tune", "llama", "lora", "qlora", "sft", "cost", "85%", "96.7", "asset", "h100", "pydantic"],
+                answer: "At Flexera, Rahul architected an Enterprise Asset Normalization platform by fine-tuning Llama 3.1-8B-Instruct using SFT and LoRA (PEFT) on NVIDIA H100 GPUs (FP16). He built an end-to-end data pipeline distilling 80–90M raw records into 25,000+ curated training examples. Using Pydantic schema validation, batch inference (1,500+ normalizations/min), and HITL routing, he achieved 96.7%+ accuracy and slashed AI infrastructure costs by 85%."
+            },
+            {
+                keywords: ["rag", "crag", "retrieval", "vector", "bm25", "rrf", "search", "document", "hallucination", "97.8", "recall"],
+                answer: "Rahul built an Adaptive & Corrective RAG (CRAG) framework on Databricks using LangGraph across 4,000+ enterprise documents. It features an intelligent query router combining Dense Vector Search, Sparse BM25, and Reciprocal Rank Fusion (RRF), achieving 97.8% contextual recall and 94.3% precision. A 3-layer RAG-triad evaluation harness and LLM-as-judge monitoring cut document search time by 75% company-wide."
+            },
+            {
+                keywords: ["agent", "multi-agent", "langgraph", "react", "test", "pytest", "ast", "debugging", "87%"],
+                answer: "Rahul designed a centrally orchestrated Multi-Agent Python Test Generation platform using LangGraph state machines and ReAct reasoning. It combines LLM test synthesis with static PyTest AST concurrency analysis and a self-healing failure-diagnosis loop—achieving 87% first-pass test success and reducing manual debugging effort by 70% across 20+ enterprise Python repositories."
+            },
+            {
+                keywords: ["databricks", "medallion", "lakehouse", "spark", "pyspark", "dlt", "cdc", "unity", "data", "genpact", "xgboost", "bert", "forecast", "2.5m"],
+                answer: "In Data & ML Engineering: At Flexera, Rahul led the Unified Object Model on Databricks using Medallion Architecture (Bronze-Silver-Gold), Delta Live Tables (DLT), and a column-level CDC framework with 100% data integrity while mentoring 4 engineers. Earlier at Genpact, he built XGBoost inventory/COGS forecasting models (97.65% accuracy, $2.5M projected savings) and productionized fine-tuned BERT classification (98% accuracy) on AWS SageMaker."
+            },
+            {
+                keywords: ["education", "iit", "bombay", "degree", "college", "mtech", "m.tech", "study", "university", "cgpa"],
+                answer: "Rahul holds an M.Tech in Geo-Informatics from the Indian Institute of Technology (IIT) Bombay (2020–2022, CGPA: 7.83), where he also served as a Teaching Assistant mentoring 40+ students. He earned his B.E. in Computer Engineering from SKN Sinhgad Institute of Technology and Science."
+            },
+            {
+                keywords: ["skill", "stack", "tech", "language", "python", "aws", "cloud", "mlops", "docker", "kubernetes"],
+                answer: "Rahul's core stack spans Python, SQL, C++, PyTorch, Hugging Face (LoRA/QLoRA/SFT), LangGraph, LangChain, OpenAI/Claude/Llama APIs, Hybrid RAG (FAISS, Pinecone, Chroma, Databricks Vector Search), PySpark, Databricks (DLT, Unity Catalog), and AWS (SageMaker, Bedrock, EC2, Lambda), plus Docker, Kubernetes, Terraform, and MLflow."
+            },
+            {
+                keywords: ["contact", "email", "phone", "hire", "linkedin", "github", "reach", "location", "hyderabad", "resume"],
+                answer: "You can reach Rahul directly at rwaghmare981@gmail.com or +91-9110596243 / +91-8605296243. He is based in Hyderabad, India. Connect on LinkedIn (linkedin.com/in/rwaghmare29), explore his code on GitHub (github.com/rwaghmare-tech), or click 'Download Resume (PDF)' at the top of the page!"
+            }
+        ];
 
-        function runCommand(cmd) {
+        function matchIntent(query) {
+            const q = query.toLowerCase();
+            let bestMatch = null;
+            let maxScore = 0;
+
+            for (const item of knowledgeBase) {
+                let score = 0;
+                for (const kw of item.keywords) {
+                    if (q.includes(kw)) score += 2;
+                }
+                if (score > maxScore) {
+                    maxScore = score;
+                    bestMatch = item.answer;
+                }
+            }
+
+            if (bestMatch) return bestMatch;
+            return "Rahul is a Senior AI/ML Engineer at Flexera (and IIT Bombay M.Tech alumnus) with 4+ years of experience in LLM Fine-Tuning (Llama 3.1, LoRA/SFT), Adaptive RAG, LangGraph Multi-Agent systems, and Databricks Lakehouse architectures. Try asking specifically about his 'Llama 3.1 fine-tuning', 'Adaptive RAG', 'Multi-Agent test platform', 'Databricks/Genpact work', or 'contact details'!";
+        }
+
+        function streamText(element, text, speed = 12) {
+            let i = 0;
+            const outputContainer = document.getElementById("terminal-output");
+            function step() {
+                if (i < text.length) {
+                    element.textContent += text.charAt(i);
+                    i++;
+                    outputContainer.scrollTop = outputContainer.scrollHeight;
+                    setTimeout(step, speed);
+                }
+            }
+            step();
+        }
+
+        async function askAgent(query) {
             const output = document.getElementById("terminal-output");
-            const key = cmd.toLowerCase().trim();
-            const reply = responses[key] || "Try commands like: 'finetune', 'rag', 'agents', 'skills', or 'contact'.";
-            output.innerHTML += `<div class="text-sky-400">&gt; ${cmd}</div><div class="text-emerald-300 pl-3 border-l-2 border-emerald-500/40">${reply}</div>`;
+            
+            // Append User Query
+            const userDiv = document.createElement("div");
+            userDiv.className = "text-sky-400 font-medium";
+            userDiv.textContent = `> ${query}`;
+            output.appendChild(userDiv);
+
+            // Create Agent Response Container
+            const replyDiv = document.createElement("div");
+            replyDiv.className = "text-emerald-300 pl-3 border-l-2 border-emerald-500/40 leading-relaxed";
+            output.appendChild(replyDiv);
             output.scrollTop = output.scrollHeight;
+
+            // If Live LLM Cloudflare Worker is configured, call it; otherwise use Smart NLP Matcher
+            if (LIVE_LLM_ENDPOINT) {
+                try {
+                    replyDiv.textContent = "Thinking...";
+                    const res = await fetch(LIVE_LLM_ENDPOINT, {
+                        method: "POST",
+                        headers: { "Content-Type": "application/json" },
+                        body: JSON.stringify({ query })
+                    });
+                    const data = await res.json();
+                    replyDiv.textContent = "";
+                    streamText(replyDiv, data.reply || matchIntent(query));
+                    return;
+                } catch (err) {
+                    replyDiv.textContent = "";
+                }
+            }
+
+            const answer = matchIntent(query);
+            streamText(replyDiv, answer);
         }
 
         function handleTerminalSubmit(e) {
             e.preventDefault();
             const input = document.getElementById("terminal-input");
             if (!input.value.trim()) return;
-            runCommand(input.value);
+            askAgent(input.value.trim());
             input.value = "";
         }
 
+        function clearTerminal() {
+            document.getElementById("terminal-output").innerHTML = `<div class="text-slate-400">[SYSTEM] Terminal cleared. Ask any question about Rahul's AI/ML experience, systems, or contact info.</div>`;
+        }
+
         // Project Filtering
-        function filterProjects(category) {
+        function filterProjects(category, btnEl) {
             document.querySelectorAll(".project-card").forEach(card => {
                 card.style.display = (category === "all" || card.dataset.category === category) ? "flex" : "none";
             });
@@ -374,8 +513,8 @@
                 btn.classList.remove("bg-sky-500", "text-slate-950", "font-semibold");
                 btn.classList.add("glass", "text-slate-300");
             });
-            event.target.classList.add("bg-sky-500", "text-slate-950", "font-semibold");
-            event.target.classList.remove("glass", "text-slate-300");
+            btnEl.classList.add("bg-sky-500", "text-slate-950", "font-semibold");
+            btnEl.classList.remove("glass", "text-slate-300");
         }
     </script>
 </body>
