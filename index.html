@@ -663,10 +663,15 @@
                         body: JSON.stringify({ query })
                     });
                     const data = await res.json();
+                    if (res.ok && data.reply) {
+                        replyDiv.textContent = "";
+                        streamText(replyDiv, data.reply);
+                        return;
+                    }
+                    console.warn("Groq Worker Fallback Triggered:", data.error);
                     replyDiv.textContent = "";
-                    streamText(replyDiv, data.reply || matchIntent(query));
-                    return;
                 } catch (err) {
+                    console.warn("Network Fallback Triggered:", err);
                     replyDiv.textContent = "";
                 }
             }
